@@ -1,0 +1,382 @@
+<!-- ================= CART ICON ================= -->
+
+<div class="cart-btn" id="openCart">
+
+  <i class="fa-solid fa-cart-shopping"></i>
+
+  <span class="cart-count" id="cartCount">3</span>
+
+</div>
+
+<!-- ================= OVERLAY ================= -->
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- ================= CART POPUP ================= -->
+
+<div class="cart-popup" id="cartPopup">
+ 
+  <!-- HEADER -->
+  <div class="cart-header">
+
+    <h2>
+      <i class="fa-solid fa-cart-shopping"></i>
+      Mon Panier
+    </h2>
+
+    <button class="close-cart" id="closeCart">
+
+      <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+  </div>
+
+  <!-- CART BODY -->
+  <div class="cart-body" id="cartBody">
+
+    <!-- ITEM -->
+    <div class="cart-item">
+
+      <img 
+        src="https://picsum.photos/120?1"
+        alt=""
+      >
+
+      <div class="cart-info">
+
+        <h4>iPhone 15 Pro Max</h4>
+
+        <p>Quantité : 1</p>
+
+        <span>1 250 €</span>
+
+      </div>
+
+      <button class="remove-item">
+
+        <i class="fa-solid fa-trash"></i>
+
+      </button>
+
+    </div>
+
+    <!-- ITEM -->
+    <div class="cart-item">
+
+      <img 
+        src="https://picsum.photos/120?2"
+        alt=""
+      >
+
+      <div class="cart-info">
+
+        <h4>Samsung Smart TV</h4>
+
+        <p>Quantité : 1</p>
+
+        <span>850 €</span>
+
+      </div>
+
+      <button class="remove-item">
+
+        <i class="fa-solid fa-trash"></i>
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- EMPTY -->
+  <div class="empty-cart" id="emptyCart" style="display:none;">
+
+    <i class="fa-solid fa-cart-shopping"></i>
+
+    <p>Votre panier est vide</p>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="cart-footer">
+
+    <div class="cart-total">
+
+      <span>Total :</span>
+
+      <strong id="cartTotal">
+        2 100 €
+      </strong>
+
+    </div>
+
+    <button class="checkout-btn">
+
+      <i class="fa-solid fa-check"></i>
+      Valider le panier
+
+    </button>
+
+  </div>
+
+</div>
+
+<!-- ================= CSS ================= -->
+
+<style>
+
+:root{
+  --primary:#3b82f6;
+  --secondary:#06b6d4;
+  --card:#1e293b;
+  --bg:#0f172a;
+  --danger:#ef4444;
+  --success:#10b981;
+  --muted:#94a3b8;
+}
+
+/* CART BUTTON */
+.cart-btn{
+  position:relative;
+  width:50px;
+  height:50px;
+  border-radius:14px;
+  background:#1e293b;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  color:white;
+  font-size:20px;
+}
+
+.cart-count{
+  position:absolute;
+  top:-5px;
+  right:-5px;
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  background:#ef4444;
+  color:white;
+  font-size:11px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:600;
+}
+
+/* OVERLAY */
+.cart-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+  z-index:999;
+}
+
+.cart-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+/* POPUP */
+.cart-popup{
+  position:fixed;
+  top:0;
+  right:-450px;
+  width:420px;
+  height:100vh;
+  background:#0f172a;
+  z-index:1000;
+  display:flex;
+  flex-direction:column;
+  transition:.4s ease;
+  border-left:1px solid rgba(255,255,255,0.05);
+  box-shadow:-10px 0 30px rgba(0,0,0,0.4);
+}
+
+.cart-popup.active{
+  right:0;
+}
+
+/* HEADER */
+.cart-header{
+  padding:22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.cart-header h2{
+  color:white;
+  font-size:22px;
+}
+
+.close-cart{
+  width:40px;
+  height:40px;
+  border:none;
+  border-radius:12px;
+  background:#1e293b;
+  color:white;
+  cursor:pointer;
+  font-size:18px;
+}
+
+/* BODY */
+.cart-body{
+  flex:1;
+  overflow-y:auto;
+  padding:20px;
+}
+
+/* ITEM */
+.cart-item{
+  display:flex;
+  gap:15px;
+  background:#1e293b;
+  padding:14px;
+  border-radius:18px;
+  margin-bottom:18px;
+  align-items:center;
+}
+
+.cart-item img{
+  width:90px;
+  height:90px;
+  border-radius:14px;
+  object-fit:cover;
+}
+
+.cart-info{
+  flex:1;
+}
+
+.cart-info h4{
+  color:white;
+  margin-bottom:6px;
+  font-size:15px;
+}
+
+.cart-info p{
+  color:#94a3b8;
+  font-size:13px;
+  margin-bottom:6px;
+}
+
+.cart-info span{
+  color:#10b981;
+  font-weight:700;
+}
+
+.remove-item{
+  width:40px;
+  height:40px;
+  border:none;
+  border-radius:12px;
+  background:rgba(239,68,68,0.15);
+  color:#ef4444;
+  cursor:pointer;
+}
+
+/* EMPTY */
+.empty-cart{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  color:#94a3b8;
+}
+
+.empty-cart i{
+  font-size:70px;
+  opacity:.4;
+}
+
+/* FOOTER */
+.cart-footer{
+  padding:22px;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.cart-total{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+  color:white;
+  font-size:18px;
+}
+
+.cart-total strong{
+  color:#10b981;
+  font-size:24px;
+}
+
+/* BUTTON */
+.checkout-btn{
+  width:100%;
+  height:55px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(135deg,#3b82f6,#06b6d4);
+  color:white;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.checkout-btn:hover{
+  transform:translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media(max-width:500px){
+
+  .cart-popup{
+    width:100%;
+  }
+
+}
+
+</style>
+
+<!-- ================= JS ================= -->
+
+<script>
+
+const openCart = document.getElementById("openCart");
+const closeCart = document.getElementById("closeCart");
+const cartPopup = document.getElementById("cartPopup");
+const cartOverlay = document.getElementById("cartOverlay");
+
+openCart.onclick = () => {
+
+  cartPopup.classList.add("active");
+  cartOverlay.classList.add("active");
+
+};
+
+closeCart.onclick = () => {
+
+  cartPopup.classList.remove("active");
+  cartOverlay.classList.remove("active");
+
+};
+
+cartOverlay.onclick = () => {
+
+  cartPopup.classList.remove("active");
+  cartOverlay.classList.remove("active");
+
+};
+
+</script>
