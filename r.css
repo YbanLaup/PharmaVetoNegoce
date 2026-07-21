@@ -18,6 +18,11 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Réserve un espace de la largeur de la scrollbar des DEUX côtés,
+     pour que le contenu centré (navbar, sections...) ne soit plus
+     décalé visuellement vers la gauche à cause de la scrollbar
+     qui, par défaut, ne "mange" de l'espace qu'à droite. */
+  scrollbar-gutter: stable both-edges;
 }
 
 body {
@@ -142,16 +147,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;   /* permet à .search de passer sur sa propre ligne en mobile */
   gap: 8px;
 }
 
 .icons {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 8px;
+  flex-shrink: 0;
   margin-left: auto;
 }
 
@@ -1038,18 +1043,24 @@ body {
     font-size: 0.65rem;
   }
 
-  /* La recherche redevient visible et intégrée à la top-nav */
+  /* La recherche redevient visible : elle est maintenant un élément à
+     part entière entre le logo et les icônes (plus imbriquée dans .icons),
+     donc elle occupe l'espace central et paraît vraiment centrée. */
   .search {
     display: flex;
     width: auto;
-    flex: 1;
-    max-width: 380px;
-    margin-top: 0;
+    flex: 1 1 auto;
+    min-width: 0;       /* autorise le champ à rétrécir sans déborder */
+    max-width: 620px;
+    margin: 0 20px;
     order: 0;
   }
 
   .icons {
+    width: auto;
+    flex: 0 0 auto;
     gap: 12px;
+    margin-left: 0;
   }
 
   .icons > i,
@@ -1058,13 +1069,15 @@ body {
     width: 40px;
     height: 40px;
     font-size: 17px;
+    flex-shrink: 0;    /* les icônes gardent une taille fixe, jamais écrasées */
   }
 
   .menu-toggle {
     display: none;
   }
 
-  /* La navigation catégories redevient une ligne horizontale visible */
+  /* La navigation catégories est maintenant centrée en bloc, comme le
+     bloc logo/recherche/icônes au-dessus, au lieu d'être collée à gauche. */
   .category-nav {
     display: flex;
     flex-direction: row;
@@ -1076,9 +1089,9 @@ body {
 
   .category-container {
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    justify-content: center;   /* bloc centré comme la barre du dessus */
+    overflow-x: visible;
     gap: 10px;
   }
 
