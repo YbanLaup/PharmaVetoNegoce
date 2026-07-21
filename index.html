@@ -7,6 +7,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="s.css">
   <link rel="stylesheet" href="r.css">
   <link rel="stylesheet" href="panier.css">
 </head>
@@ -26,14 +27,14 @@
           </span>
         </a>
 
-        <div class="icons">
+        <form class="search" role="search" aria-label="Recherche de produits">
+          <input type="text" placeholder="Rechercher un produit..." aria-label="Rechercher un produit">
+          <button type="submit" aria-label="Lancer la recherche">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
 
-          <form class="search" role="search" aria-label="Recherche de produits">
-            <input type="text" placeholder="Rechercher un produit..." aria-label="Rechercher un produit">
-            <button type="submit" aria-label="Lancer la recherche">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </form>
+        <div class="icons">
 
           <i class="fa fa-store" role="button" tabindex="0" aria-label="Nos boutiques"></i>
 
@@ -448,6 +449,7 @@
     function toggleCart(open) {
       cartSidebar.classList.toggle("active", open);
       cartOverlay.classList.toggle("active", open);
+      document.body.classList.toggle("cart-open", open);
     }
 
     openCart.addEventListener("click", () => toggleCart(true));
