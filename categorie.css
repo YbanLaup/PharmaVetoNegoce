@@ -376,7 +376,7 @@ select:focus-visible,
   padding: 0 16px;
   display: flex;
   flex-direction: column;
-  margin-top: -100px;
+  margin-top: -150px;
   gap: 14px;
 }
 
