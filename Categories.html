@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>NovaSys-Solution</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+<link rel="stylesheet" href="categorie.css">
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+
+    <div class="top-nav">
+      <div class="top-container">
+
+        <a href="Acceuil.html" class="logo">
+          <img src="logo.png" alt="Logo NovaSys-Solution">
+          <span>
+            NovaSys
+            <small>SOLUTION</small>
+          </span>
+        </a>
+
+        <form class="search" role="search" aria-label="Recherche de produits">
+          <input type="text" placeholder="Rechercher un produit..." aria-label="Rechercher un produit">
+          <button type="submit" aria-label="Lancer la recherche">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+
+        <div class="icons">
+
+          <i class="fa fa-store" role="button" tabindex="0" aria-label="Nos boutiques"></i>
+
+          <a href="login.html" aria-label="Mon compte">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </a>
+
+          <a href="tel:+22899980094" aria-label="Nous appeler">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+          </a>
+
+          <!-- PANIER -->
+          <div class="cart-icon" id="openCart" role="button" tabindex="0" aria-label="Ouvrir le panier">
+            <i class="fa fa-cart-shopping" aria-hidden="true"></i>
+            <span class="cart-badge" id="cartCount">3</span>
+          </div>
+
+          <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <nav class="category-nav" id="categoryNav" aria-label="Catégories de produits">
+      <div class="category-container">
+
+        <a href="Acceuil.html"><div class="category">Accueil</div></a>
+        <a href="Categories.html"><div class="category">Ordinateurs</div></a>
+        <a href="Categories.html"><div class="category">TV</div></a>
+        <a href="Categories.html"><div class="category">Mode</div></a>
+        <a href="Categories.html"><div class="category">Chaussures</div></a>
+        <a href="Categories.html"><div class="category">Maison</div></a>
+        <a href="Categories.html"><div class="category">Beauté</div></a>
+        <a href="Categories.html"><div class="category">Gaming</div></a>
+        <a href="Categories.html"><div class="category">Sport</div></a>
+        <a href="Categories.html"><div class="category">Accessoires</div></a>
+
+      </div>
+    </nav>
+
+  </header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+  <div class="hero-box">
+
+    <img src="https://picsum.photos/1400/500?tv" alt="">
+
+    <div class="hero-overlay">
+
+      <div class="hero-content">
+
+        <span>Nouvelle Collection</span>
+
+        <h1>Smart TV Ultra HD</h1>
+
+        <p>
+          Découvrez notre sélection premium de téléviseurs 4K,
+          OLED et Smart TV dernière génération.
+        </p>
+
+        <button>
+          Explorer la collection
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= FILTER ================= -->
+
+<div class="filter-bar">
+
+  <div class="filter-left">
+
+    <button class="filter-btn active">Toutes</button>
+    <button class="filter-btn">OLED</button>
+    <button class="filter-btn">Smart TV</button>
+    <button class="filter-btn">4K</button>
+
+  </div>
+
+  <div class="filter-right">
+
+    <select>
+      <option>Plus récent</option>
+      <option>Prix croissant</option>
+      <option>Prix décroissant</option>
+    </select>
+
+  </div>
+
+</div>
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products-section">
+
+  <div class="products">
+
+    <!-- PRODUCT -->
+    <div class="product">
+
+      <div class="product-image">
+
+        <img src="https://picsum.photos/400/300?201">
+
+        <span class="product-badge">
+          Nouveau
+        </span>
+
+        <div class="product-actions">
+
+          <button>
+            <i class="fa fa-eye"></i>
+          </button>
+
+          <button>
+            <i class="fa fa-heart"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="product-body">
+
+        <div class="product-category">
+          Samsung
+        </div>
+
+        <h3>Samsung OLED 65"</h3>
+
+        <p class="product-desc">
+          TV intelligente Ultra HD avec Dolby Vision.
+        </p>
+
+        <div class="product-footer">
+
+          <div class="price">
+            1250 €
+          </div>
+
+          <button class="btn-cart">
+            <i class="fa fa-cart-shopping"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="product">
+
+      <div class="product-image">
+
+        <img src="https://picsum.photos/400/300?202">
+
+        <span class="product-badge">
+          Promo
+        </span>
+
+        <div class="product-actions">
+
+          <button>
+            <i class="fa fa-eye"></i>
+          </button>
+
+          <button>
+            <i class="fa fa-heart"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="product-body">
+
+        <div class="product-category">
+          LG
+        </div>
+
+        <h3>LG Smart TV 55"</h3>
+
+        <p class="product-desc">
+          Design moderne avec image ultra nette.
+        </p>
+
+        <div class="product-footer">
+
+          <div class="price">
+            980 €
+          </div>
+
+          <button class="btn-cart">
+            <i class="fa fa-cart-shopping"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="product">
+
+      <div class="product-image">
+
+        <img src="https://picsum.photos/400/300?203">
+
+        <span class="product-badge">
+          4K
+        </span>
+
+        <div class="product-actions">
+
+          <button>
+            <i class="fa fa-eye"></i>
+          </button>
+
+          <button>
+            <i class="fa fa-heart"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="product-body">
+
+        <div class="product-category">
+          Sony
+        </div>
+
+        <h3>Sony Bravia 75"</h3>
+
+        <p class="product-desc">
+          Immersion totale avec affichage HDR premium.
+        </p>
+
+        <div class="product-footer">
+
+          <div class="price">
+            1850 €
+          </div>
+
+          <button class="btn-cart">
+            <i class="fa fa-cart-shopping"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="product">
+
+      <div class="product-image">
+
+        <img src="https://picsum.photos/400/300?204">
+
+        <span class="product-badge">
+          Smart
+        </span>
+
+        <div class="product-actions">
+
+          <button>
+            <i class="fa fa-eye"></i>
+          </button>
+
+          <button>
+            <i class="fa fa-heart"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="product-body">
+
+        <div class="product-category">
+          Hisense
+        </div>
+
+        <h3>Hisense UHD TV</h3>
+
+        <p class="product-desc">
+          Performance et qualité d’image exceptionnelle.
+        </p>
+
+        <div class="product-footer">
+
+          <div class="price">
+            740 €
+          </div>
+
+          <button class="btn-cart">
+            <i class="fa fa-cart-shopping"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= PANIER LATERAL ================= -->
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<div class="cart-sidebar" id="cartSidebar">
+
+  <!-- HEADER -->
+  <div class="cart-header">
+
+    <h2>Mon Panier</h2>
+
+    <i class="fa fa-xmark close-cart" id="closeCart"></i>
+
+  </div>
+
+  <!-- CONTENU PANIER -->
+  <div class="cart-content">
+
+    <!-- ARTICLE -->
+    <div class="cart-item" data-price="1250">
+
+      <img src="https://picsum.photos/100/100?201">
+
+      <div class="cart-item-info">
+
+        <h4>Samsung OLED 65"</h4>
+
+        <p class="cart-price">1250 €</p>
+
+        <!-- QUANTITE -->
+        <div class="quantity-box">
+
+          <button class="qty-btn minus">
+            <i class="fa fa-minus"></i>
+          </button>
+
+          <span class="qty">1</span>
+
+          <button class="qty-btn plus">
+            <i class="fa fa-plus"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ARTICLE -->
+    <div class="cart-item" data-price="980">
+
+      <img src="https://picsum.photos/100/100?202">
+
+      <div class="cart-item-info">
+
+        <h4>LG Smart TV 55"</h4>
+
+        <p class="cart-price">980 €</p>
+
+        <!-- QUANTITE -->
+        <div class="quantity-box">
+
+          <button class="qty-btn minus">
+            <i class="fa fa-minus"></i>
+          </button>
+
+          <span class="qty">1</span>
+
+          <button class="qty-btn plus">
+            <i class="fa fa-plus"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ARTICLE -->
+    <div class="cart-item" data-price="740">
+
+      <img src="https://picsum.photos/100/100?204">
+
+      <div class="cart-item-info">
+
+        <h4>Hisense UHD TV</h4>
+
+        <p class="cart-price">740 €</p>
+
+        <!-- QUANTITE -->
+        <div class="quantity-box">
+
+          <button class="qty-btn minus">
+            <i class="fa fa-minus"></i>
+          </button>
+
+          <span class="qty">1</span>
+
+          <button class="qty-btn plus">
+            <i class="fa fa-plus"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="cart-footer">
+
+    <!-- NOMBRE D'ARTICLES -->
+    <div class="cart-total">
+
+      <span>Articles :</span>
+
+      <span id="totalItems">3</span>
+
+    </div>
+
+    <!-- TOTAL PANIER -->
+    <div class="cart-total">
+
+      <span>Total :</span>
+
+      <span id="totalPrice">2970 €</span>
+
+    </div>
+
+    <!-- BOUTON -->
+    <button class="checkout-btn">
+
+      <i class="fa fa-bag-shopping"></i>
+
+      Passer la commande
+
+    </button>
+
+  </div>
+
+</div>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LOGO + DESCRIPTION -->
+    <div class="footer-col">
+
+      <div class="footer-logo">
+
+        <img src="logo.png" alt="logo">
+
+        <span>NovaSys-Solution</span>
+
+      </div>
+
+      <p>
+        Solution moderne de gestion et e-commerce.
+        Performance, simplicité et innovation au service de votre entreprise.
+      </p>
+
+    </div>
+
+    <!-- LIENS RAPIDES -->
+    <div class="footer-col">
+
+      <h3>Liens rapides</h3>
+
+      <a href="#">Accueil</a>
+      <a href="#">Produits</a>
+      <a href="#">Catégories</a>
+      <a href="#">Promotions</a>
+
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="footer-col">
+
+      <h3>Support</h3>
+
+      <a href="#">Centre d'aide</a>
+      <a href="#">Contact</a>
+      <a href="#">FAQ</a>
+      <a href="#">Conditions</a>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+
+      <h3>Contact</h3>
+
+      <p>
+        <i class="fa fa-envelope"></i>
+        support@novasys.com
+      </p>
+
+      <p>
+        <i class="fa fa-phone"></i>
+        +228 99 98 00 94
+      </p>
+
+      <div class="socials">
+
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+
+        <a href="https://wa.me/22899980094" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 NovaSys-Solution - Tous droits réservés
+  </div>
+
+</footer>
+
+<script>
+
+/* ================= OUVERTURE PANIER ================= */
+
+const openCart = document.getElementById("openCart");
+const closeCart = document.getElementById("closeCart");
+const cartSidebar = document.getElementById("cartSidebar");
+const cartOverlay = document.getElementById("cartOverlay");
+
+openCart.addEventListener("click", ()=>{
+
+  cartSidebar.classList.add("active");
+  cartOverlay.classList.add("active");
+
+});
+
+closeCart.addEventListener("click", ()=>{
+
+  cartSidebar.classList.remove("active");
+  cartOverlay.classList.remove("active");
+
+});
+
+cartOverlay.addEventListener("click", ()=>{
+
+  cartSidebar.classList.remove("active");
+  cartOverlay.classList.remove("active");
+
+});
+
+/* ================= GESTION QUANTITE ================= */
+
+const plusBtns = document.querySelectorAll(".plus");
+const minusBtns = document.querySelectorAll(".minus");
+
+plusBtns.forEach(btn=>{
+
+  btn.addEventListener("click", ()=>{
+
+    const cartItem = btn.closest(".cart-item");
+
+    const qtyElement = cartItem.querySelector(".qty");
+
+    let qty = parseInt(qtyElement.innerText);
+
+    qty++;
+
+    qtyElement.innerText = qty;
+
+    updateCart();
+
+  });
+
+});
+
+minusBtns.forEach(btn=>{
+
+  btn.addEventListener("click", ()=>{
+
+    const cartItem = btn.closest(".cart-item");
+
+    const qtyElement = cartItem.querySelector(".qty");
+
+    let qty = parseInt(qtyElement.innerText);
+
+    if(qty > 1){
+
+      qty--;
+
+      qtyElement.innerText = qty;
+
+      updateCart();
+
+    }
+
+  });
+
+});
+
+/* ================= TOTAL PANIER ================= */
+
+function updateCart(){
+
+  const cartItems = document.querySelectorAll(".cart-item");
+
+  let total = 0;
+
+  let totalItems = 0;
+
+  cartItems.forEach(item=>{
+
+    const price = parseInt(item.dataset.price);
+
+    const qty = parseInt(item.querySelector(".qty").innerText);
+
+    total += price * qty;
+
+    totalItems += qty;
+
+  });
+
+  document.getElementById("totalPrice").innerText = total + " €";
+
+  document.getElementById("totalItems").innerText = totalItems;
+
+  document.getElementById("cartCount").innerText = totalItems;
+
+}
+
+/* INITIALISATION */
+
+updateCart();
+
+</script>
+
+</body>
+</html>
