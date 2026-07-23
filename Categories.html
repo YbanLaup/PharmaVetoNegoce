@@ -10,12 +10,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 <link rel="stylesheet" href="categorie.css">
-  <link rel="stylesheet" href="r.css">
+  <link rel="stylesheet" href="Style.css">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+ <!-- ================= NAVBAR ================= -->
   <header class="navbar">
 
     <div class="top-nav">
@@ -66,7 +66,7 @@
     <nav class="category-nav" id="categoryNav" aria-label="Catégories de produits">
       <div class="category-container">
 
-        <a href="Acceuil.html"><div class="category">Accueil</div></a>
+        <a href="index.html"><div class="category">Accueil</div></a>
         <a href="Categories.html"><div class="category">Ordinateurs</div></a>
         <a href="Categories.html"><div class="category">TV</div></a>
         <a href="Categories.html"><div class="category">Mode</div></a>
@@ -702,6 +702,18 @@ function updateCart(){
 /* INITIALISATION */
 
 updateCart();
+
+   /* ================= MENU MOBILE (recherche + catégories) ================= */
+    const menuToggle = document.getElementById("menuToggle");
+    const search = document.querySelector(".search");
+    const categoryNav = document.getElementById("categoryNav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = search.classList.toggle("mobile-open");
+      categoryNav.classList.toggle("mobile-open");
+      menuToggle.querySelector("i").className = isOpen ? "fa fa-xmark" : "fa fa-bars";
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
 
 </script>
 
